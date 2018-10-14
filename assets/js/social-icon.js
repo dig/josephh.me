@@ -2,6 +2,9 @@
 /*
  * Handles the text that appears when you hover
  * over the social media icons.
+ * 
+ * @author Joseph
+ * @copyright josephh.uk 2018
  */ 
 
 $("*[data-icon-text]").hover(
