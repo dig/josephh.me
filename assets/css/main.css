@@ -136,3 +136,10 @@ small {
 .sidebar .gta {
   background: #9b2b2b;
 }
+
+#icon-text {
+  position: fixed;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0.3s, opacity 0.5s linear;
+}

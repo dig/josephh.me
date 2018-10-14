@@ -17,8 +17,10 @@ $("*[data-icon-text]").hover(
     $("#icon-text").css("top", sbHeight + position.top - 22.5 + "px");
     $("#icon-text").css("left", position.left + 65 + "px");
 
-    $("#icon-text").css("display", "");
+    $("#icon-text").css("visibility", "visible");
+    $("#icon-text").css("opacity", "1");
   }, function() {
-    $("#icon-text").css("display", "none");
+    $("#icon-text").css("visibility", "hidden");
+    $("#icon-text").css("opacity", "0");
   }
 );
