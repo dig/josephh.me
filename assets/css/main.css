@@ -118,17 +118,21 @@ small {
   height: 60px;
 }
 
+.sidebar .email {
+  background: #16648b;
+}
+
 .sidebar .github {
   background: #4e545a;
 }
 
-.sidebar .github img {
+.sidebar .github img, .sidebar .email img {
   filter: invert(100%) opacity(.7);
   -webkit-filter: invert(100%) opacity(.7);
   transition: 0.2s;
 }
 
-.sidebar .github img:hover {
+.sidebar .github img:hover, .sidebar .email img:hover {
   filter: invert(100%) opacity(1);
   -webkit-filter: invert(100%) opacity(1);
 }
