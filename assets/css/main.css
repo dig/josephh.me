@@ -8,10 +8,10 @@ body {
   color: #fff;
   background-color: #222;
   font-family: Raleway;
-  font-size: 18px;
+  font-size: 15px;
 }
 
-h1 {
+h1, h2, h3 {
   margin: 0;
 }
 
@@ -38,6 +38,10 @@ small {
 main {
   width: 100%;
   height: 95%;
+}
+
+main.content {
+  margin: 20px 0;
 }
 
 header {
@@ -87,20 +91,18 @@ video.cover {
   opacity: 0.25;
 }
 
-.vertical-center {
+.flex-center {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.horizontal-center {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-main.horizontal-center {
+main.flex-center {
   flex-direction: column;
+}
+
+.horizonal-center {
+  margin: 0 auto;
 }
 
 .short-bio {
@@ -126,4 +128,35 @@ main.horizontal-center {
 
 .button.down {
   margin-top: 10px;
+}
+
+.container {
+  max-width: 50%;
+}
+
+.container > .header {
+  border-bottom: 1px solid #fff;
+  padding-bottom: 3px;
+  font-size: 16px;
+}
+
+.container > .header > h3 {
+  display: inline-block;
+}
+
+.container > .header > .tools {
+  float: right;
+  cursor: pointer;
+}
+
+.container > .header > .tools input {
+  
+}
+
+.container > .header input:checked + .content { 
+  display: none; 
+}
+
+.container > .content {
+  padding: 5px 0;
 }
