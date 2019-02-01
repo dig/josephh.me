@@ -144,10 +144,6 @@ main.flex-center {
   max-width: 50%;
 }
 
-.container > .header.about {
-  border-image: linear-gradient(90deg,#00bcff,#244493) 1;
-}
-
 .container > .header {
   border-bottom-width: 3px;
   border-bottom-style: solid;
@@ -178,4 +174,16 @@ main.flex-center {
 
 .container > .content {
   padding: 8px 0;
+}
+
+/* Page gradients */
+.container.about > .header {
+  border-image: linear-gradient(90deg,#00bcff,#244493) 1;
+}
+
+.container.about > .content > span {
+  background: linear-gradient(90deg,#00bcff,#476dca);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
