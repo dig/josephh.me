@@ -80,11 +80,11 @@ video.cover {
   -o-filter: blur(3px);
   -ms-filter: blur(3px);
   filter: blur(3px);
-	-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=30)";
-	filter: alpha(opacity=30);
-	-moz-opacity:0.3;
-  -khtml-opacity: 0.3;
-  opacity: 0.3;
+	-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=25)";
+	filter: alpha(opacity=25);
+	-moz-opacity:0.25;
+  -khtml-opacity: 0.25;
+  opacity: 0.25;
 }
 
 .vertical-center {
