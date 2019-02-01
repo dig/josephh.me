@@ -6,7 +6,7 @@ html, body {
 
 body {
   color: #fff;
-  background-color: #262a30;
+  background-color: #222;
   font-family: Raleway;
   font-size: 18px;
 }
@@ -46,15 +46,24 @@ header {
   text-transform: uppercase;
 }
 
+footer {
+  position: fixed;
+  bottom: 8px;
+  right: 8px;
+  font-family: Rubik, sans-serif;
+  font-size: 12px;
+}
+
 header > a {
-  transition: 0.15s;
+  transition: all .6s ease;
+}
+
+header > a.selected, header > a:hover {
+  transform: scale(1.05);
 }
 
 header > a.selected {
   font-weight: 600;
-}
-
-header > a:hover, header > a.selected {
   border-bottom: 1px solid #fff;
 }
 
@@ -100,34 +109,21 @@ main.horizontal-center {
 }
 
 .button {
-  background: #1A2326;
+  background: #222;
   color: rgba(255, 255, 255, 0.6);
   border: 1px solid rgba(255, 255, 255, 0.1);
   padding: 10px;
   font-size: 14px;
   cursor: pointer;
-  transition: 0.3s;
+  transition: all .6s ease;
 }
 
 .button:hover {
   color: #fff;
   border: 1px solid rgba(255, 255, 255, 0.7);
+  transform: scale(1.05);
 }
 
 .button.down {
   margin-top: 10px;
 }
-
-/* .work {
-  background: #1A2326;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
-  height: 100%;
-  width: 100%;
-}
-
-#icon-text {
-  position: fixed;
-  visibility: hidden;
-  opacity: 0;
-  transition: visibility 0.3s, opacity 0.5s linear;
-} */
