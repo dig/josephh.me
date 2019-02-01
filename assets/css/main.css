@@ -74,7 +74,7 @@ nav > a.selected {
 }
 
 nav > a:not(:last-child) {
-  margin-right: 12px;
+  margin-right: 16px;
 }
 
 video.cover {
@@ -126,7 +126,8 @@ main.flex-center {
 
 .button:hover {
   color: #fff;
-  transform: scale(1.05);
+  transform: scale(1.05) translateY(-0.1rem);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.25);
 }
 
 .button.down {
@@ -144,6 +145,9 @@ main.flex-center {
 .container > .header {
   border-bottom-width: 3px;
   border-bottom-style: solid;
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
   padding-bottom: 8px;
   font-size: 16px;
 }
@@ -178,20 +182,22 @@ main.flex-center {
   border-image: linear-gradient(90deg,#00bcff,#244493) 1;
 }
 .container.about > .content > span {
-  background: linear-gradient(90deg,#00bcff,#476dca);
+  background: -webkit-linear-gradient(0deg,#00bcff,#476dca);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
+  white-space: nowrap;
 }
 
 .container.lit-review > .header {
   border-image: linear-gradient(90deg,#a1003d,#5b00b1) 1;
 }
 .container.lit-review > .content > span {
-  background: linear-gradient(90deg,#a1003d,#5b00b1);
+  background: -webkit-linear-gradient(0deg,#a1003d,#5b00b1);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
+  white-space: nowrap;
 }
 .container.lit-review > article > h4:not(:first-child) {
   margin-top: 10px;
@@ -200,13 +206,30 @@ main.flex-center {
   margin-bottom: 10px;
 }
 
+.container.portfolio > .header {
+  border-image: linear-gradient(90deg,#6000b7,#009943) 1;
+}
+.container.portfolio > .content > span {
+  background: -webkit-linear-gradient(0deg,#6000b7,#009943);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  white-space: nowrap;
+}
+
 /* Scroll bar */
 ::-webkit-scrollbar {
-  width: 10px;
+  width: 6px;
 }
 ::-webkit-scrollbar-track {
   background: none;
 }
 ::-webkit-scrollbar-thumb {
   background: linear-gradient(180deg,#6023ff,#6ef7d2);
+}
+
+/* Spacers */
+.spacer-4 {
+  width: 33.33%;
+  float: left;
 }
