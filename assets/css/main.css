@@ -31,18 +31,18 @@ small {
 
 main {
   width: 100%;
-  height: calc(100% - 30px);
+  height: calc(100% - 45px);
 }
 
 header {
   left: 0;
   right: 0;
-  height: 30px;
+  height: 45px;
 }
 
 nav {
   height: 100%;
-  font-size: 16px;
+  font-size: 18px;
   text-transform: uppercase;
 }
 
@@ -198,4 +198,15 @@ main.flex-center {
 }
 .container.lit-review > article > p:not(:first-child) {
   margin-bottom: 10px;
+}
+
+/* Scroll bar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: none;
+}
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg,#6023ff,#6ef7d2);
 }
