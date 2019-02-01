@@ -20,6 +20,11 @@ p {
   padding: 0;
 }
 
+a {
+  color: #fff;
+  text-decoration: none;
+}
+
 ul {
   list-style: none;
   margin: 0;
@@ -30,9 +35,47 @@ small {
   font-size: 10px;
 }
 
-.main {
+main {
   width: 100%;
-  height: 100%;
+  height: 95%;
+}
+
+header {
+  height: 5%;
+  font-size: 16px;
+  text-transform: uppercase;
+}
+
+header > a {
+  transition: 0.15s;
+}
+
+header > a.selected {
+  font-weight: 600;
+}
+
+header > a:hover, header > a.selected {
+  border-bottom: 1px solid #fff;
+}
+
+header > a:not(:last-child) {
+  margin-right: 12px;
+}
+
+video.cover {
+  position: fixed;
+  z-index: -1;
+  overflow: hidden;
+  -webkit-filter: blur(3px);
+  -moz-filter: blur(3px);
+  -o-filter: blur(3px);
+  -ms-filter: blur(3px);
+  filter: blur(3px);
+	-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=30)";
+	filter: alpha(opacity=30);
+	-moz-opacity:0.3;
+  -khtml-opacity: 0.3;
+  opacity: 0.3;
 }
 
 .vertical-center {
@@ -44,8 +87,11 @@ small {
 .horizontal-center {
   display: flex;
   justify-content: center;
-  flex-direction: column;
   align-items: center;
+}
+
+main.horizontal-center {
+  flex-direction: column;
 }
 
 .short-bio {
@@ -69,7 +115,7 @@ small {
 }
 
 .button.down {
-  margin-top: 15px;
+  margin-top: 10px;
 }
 
 /* .work {

@@ -20,16 +20,29 @@
   </head>
 
   <body>
-    <div class="main vertical-center horizontal-center">
+
+    <header class="horizontal-center">
+      <a class="selected" href="index.html">Home</a>
+      <a href="about.html">About Me</a>
+      <a href="work.html">Work</a>
+      <a href="literature-review.html">Lit Review</a>
+      <a href="discovery-log.html">Discovery Log</a>
+    </header>
+
+    <main class="vertical-center horizontal-center">
+
+      <video autoplay muted loop class="cover">
+        <source src="assets/video/cover.mp4" type="video/mp4">
+      </video>
 
       <h1>Welcome to my site.</h1>
-      <p class="short-bio">Software / Web Developer.</p>
+      <p class="short-bio">Software & Full stack developer.</p>
 
-      <div class="button down">
+      <a href="work.html" class="button down"> 
         VIEW MY WORK <i class="fas fa-book"></i>
-      </div>
+      </a>
 
-    </div>
+    </main>
 
     <!-- BEGIN JAVASCRIPT -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
