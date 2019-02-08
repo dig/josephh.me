@@ -184,10 +184,10 @@ main.flex-center {
 }
 
 /* BEGIN PAGE GRADIENTS */
-.container.about > .header {
+.container#about > .header {
   border-image: linear-gradient(90deg,#00bcff,#244493) 1;
 }
-.container.about > .content > span {
+.container#about > .content > span {
   background: -webkit-linear-gradient(0deg,#00bcff,#476dca);
   -webkit-background-clip: text;
   background-clip: text;
@@ -195,27 +195,27 @@ main.flex-center {
   white-space: nowrap;
 }
 
-.container.lit-review > .header {
+.container#lit-review > .header {
   border-image: linear-gradient(90deg,#a1003d,#5b00b1) 1;
 }
-.container.lit-review > .content > span {
+.container#lit-review > .content > span {
   background: -webkit-linear-gradient(0deg,#a1003d,#5b00b1);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
   white-space: nowrap;
 }
-.container.lit-review > article > h4:not(:first-child) {
+.container#lit-review > article > h4:not(:first-child) {
   margin-top: 10px;
 }
-.container.lit-review > article > p:not(:first-child) {
+.container#lit-review > article > p:not(:first-child) {
   margin-bottom: 10px;
 }
 
-.container.portfolio > .header {
+.container#portfolio > .header {
   border-image: linear-gradient(90deg,#dbd73f,#6000b7) 1;
 }
-.container.portfolio > .content > span {
+.container#portfolio > .content > span {
   background: -webkit-linear-gradient(0deg,#dbd73f,#6000b7);
   -webkit-background-clip: text;
   background-clip: text;
@@ -232,7 +232,7 @@ main.flex-center {
   background: none;
 }
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(180deg,#6023ff,#6ef7d2);
+  background: #fff;
 }
 /* END SCROLL BAR */
 
@@ -256,17 +256,31 @@ main.flex-center {
 /* END SPACERS */
 
 .portfolio-image {
-  display: block;
-  width: 100%;
-  margin: auto;
-  transition: 0.3s;
-  -webkit-filter: grayscale(95%);
-  filter: grayscale(95%);
+  position: relative;
+  box-sizing: border-box;
   cursor: pointer;
+  transition: 0.3s;
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+  padding: 5px;
+  color: #bbb;
 }
 
 .portfolio-image:hover {
   -webkit-filter: grayscale(0%);
   filter: grayscale(0%);
   transform: scale(1.03);
+  color: #fff;
+}
+
+.portfolio-image > img {
+  width: 100%;
+}
+
+.portfolio-image > .subtitle {
+  position: absolute;
+  bottom: 12px;
+  left: 12px;
+  text-transform: uppercase;
+  font-weight: 800;
 }
