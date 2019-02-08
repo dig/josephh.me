@@ -193,6 +193,7 @@ main.flex-center {
   position: relative;
   box-sizing: border-box;
   cursor: pointer;
+  font-family: Rubik, sans-serif;
   transition: 0.3s;
   -webkit-filter: grayscale(100%);
   filter: grayscale(100%);
@@ -211,12 +212,28 @@ main.flex-center {
   width: 100%;
 }
 
-.portfolio-image > .subtitle {
+.portfolio-image > .title {
   position: absolute;
   bottom: 12px;
   left: 12px;
   text-transform: uppercase;
-  font-weight: 800;
+  font-weight: 600;
+}
+
+.portfolio-image > .subtitle {
+  display: none;
+  position: absolute;
+  bottom: 12px;
+  left: 12px;
+}
+
+.portfolio-image:hover .subtitle {
+  display: block;
+}
+
+.portfolio-image:hover .title {
+  display: block;
+  bottom: 26px;
 }
 
 /* BEGIN PAGE GRADIENTS */
