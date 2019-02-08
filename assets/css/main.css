@@ -8,7 +8,7 @@ body {
   color: #fff;
   background-color: #222;
   font-family: Raleway;
-  font-size: 15px;
+  font-size: 1em;
 }
 
 h1, h2, h3, h4 {
@@ -26,7 +26,7 @@ a {
 }
 
 small {
-  font-size: 10px;
+  font-size: 0.625em;
 }
 
 main {
@@ -42,13 +42,13 @@ header {
 
 nav {
   height: 100%;
-  font-size: 18px;
+  font-size: 1.125em;
   text-transform: uppercase;
 }
 
 footer {
   font-family: Rubik, sans-serif;
-  font-size: 12px;
+  font-size: 0.75em;
 }
 
 footer > .right {
@@ -61,6 +61,19 @@ footer > .left {
   position: fixed;
   bottom: 8px;
   left: 12px;
+}
+
+@media only screen and (max-width: 768px) {
+  footer > .right, footer > .left {
+    left: 50%;
+    transform: translateX(-50%);
+    right: unset;
+    white-space: nowrap;
+  }
+
+  footer > .right {
+    bottom: calc(0.75em + 12px);
+  }
 }
 
 footer a {
@@ -88,6 +101,9 @@ nav > a:not(:last-child) {
 
 video.cover {
   position: fixed;
+  min-width: 100%; 
+  min-height: 100%;
+  top: -10px;
   z-index: -1;
   overflow: hidden;
   -webkit-filter: blur(3px);
@@ -95,7 +111,6 @@ video.cover {
   -o-filter: blur(3px);
   -ms-filter: blur(3px);
   filter: blur(3px);
-	-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=25)";
 	filter: alpha(opacity=25);
 	-moz-opacity:0.25;
   -khtml-opacity: 0.25;
@@ -118,7 +133,7 @@ main.flex-center {
 
 .short-bio {
   margin-top: 4px;
-  font-size: 20px;
+  font-size: 1.2em;
 }
 
 .button {
@@ -128,7 +143,7 @@ main.flex-center {
   border-style: solid;
   border-image: linear-gradient(90deg,#5433ff,#20bdff,#a5fecb) 1;
   padding: 10px;
-  font-size: 14px;
+  font-size: 0.875em;
   cursor: pointer;
   transition: all .6s ease;
 }
@@ -144,7 +159,7 @@ main.flex-center {
 }
 
 .container {
-  max-width: 50%;
+  max-width: 636px;
 }
 
 @media only screen and (max-width: 768px) {
@@ -170,7 +185,7 @@ main.flex-center {
   border-left: 0;
   border-right: 0;
   padding-bottom: 8px;
-  font-size: 16px;
+  font-size: 1em;
 }
 
 .container > .header > h3 {
@@ -180,18 +195,6 @@ main.flex-center {
 .container > .toggle {
   float: right;
   cursor: pointer;
-}
-
-.container > input {
-  display: none;
-}
-
-.container > input:checked + .content { 
-  display: none; 
-}
-
-.container .content.hide, .container > input { 
-  display: none; 
 }
 
 .container > .content {
@@ -206,7 +209,7 @@ main.flex-center {
   -webkit-filter: grayscale(100%);
   filter: grayscale(100%);
   padding: 5px;
-  color: #bbb;
+  color: #fff;
   max-height: 210px;
   overflow: hidden;
 }
@@ -215,11 +218,12 @@ main.flex-center {
   -webkit-filter: grayscale(0%);
   filter: grayscale(0%);
   transform: scale(1.03);
-  color: #fff;
 }
 
 .portfolio-image > img {
   width: 100%;
+  -webkit-filter: blur(0.5px);
+  filter: blur(0.5px);
 }
 
 .portfolio-image > .title {
@@ -228,24 +232,43 @@ main.flex-center {
   left: 12px;
   text-transform: uppercase;
   font-weight: 600;
+  transition: all 0.5s;
+  text-shadow: 0 0 0.18em #000, -0.06em -0.06em #000, 0.06em 0.06em #000;
+}
+
+@media only screen and (max-width: 768px) {
+  .portfolio-image > .title > small {
+    display: none;
+  }
 }
 
 .portfolio-image > .subtitle {
-  display: none;
   position: absolute;
   bottom: 8px;
   left: 12px;
   overflow: hidden;
-  white-space: nowrap
+  white-space: nowrap;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s, opacity 0.5s linear;
+  text-shadow: 0 0 0.18em #000, -0.06em -0.06em #000, 0.06em 0.06em #000;
 }
 
-.portfolio-image:hover .subtitle {
-  display: block;
+.portfolio-image:hover img {
+  -webkit-filter: blur(0px);
+  filter: blur(0px);
 }
 
-.portfolio-image:hover .title {
-  display: block;
-  bottom: 22px;
+@media only screen and (min-width: 768px) {
+  .portfolio-image:hover .subtitle {
+    visibility: visible;
+    opacity: 1;
+  }
+  
+  .portfolio-image:hover .title {
+    display: block;
+    bottom: calc(1em + 8px);
+  }
 }
 
 /* BEGIN PAGE GRADIENTS */
@@ -276,6 +299,11 @@ main.flex-center {
 
 .container#portfolio {
   max-width: 70%;
+}
+@media only screen and (max-width: 768px) {
+  .container#portfolio {
+    max-width: 90%;
+  }
 }
 .container#portfolio > .header {
   border-image: linear-gradient(90deg,#dbd73f,#6000b7) 1;
