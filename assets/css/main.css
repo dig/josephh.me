@@ -47,14 +47,23 @@ nav {
 }
 
 footer {
-  position: fixed;
-  bottom: 8px;
-  right: 12px;
   font-family: Rubik, sans-serif;
   font-size: 12px;
 }
 
-footer > a {
+footer > .right {
+  position: fixed;
+  bottom: 8px;
+  right: 12px;
+}
+
+footer > .left {
+  position: fixed;
+  bottom: 8px;
+  left: 12px;
+}
+
+footer a {
   font-weight: 600;
 }
 
@@ -135,10 +144,10 @@ main.flex-center {
 }
 
 .container {
-  max-width: 60%;
+  max-width: 50%;
 }
 
-@media only screen and (max-width: 760px) {
+@media only screen and (max-width: 768px) {
   .container {
     max-width: 90%;
   }
@@ -226,6 +235,8 @@ main.flex-center {
   position: absolute;
   bottom: 8px;
   left: 12px;
+  overflow: hidden;
+  white-space: nowrap
 }
 
 .portfolio-image:hover .subtitle {
@@ -242,10 +253,7 @@ main.flex-center {
   border-image: linear-gradient(90deg,#00bcff,#244493) 1;
 }
 .container#about > .content > span {
-  background: -webkit-linear-gradient(0deg,#00bcff,#476dca);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: #00bcff;
   white-space: nowrap;
 }
 
@@ -266,6 +274,9 @@ main.flex-center {
   margin-bottom: 10px;
 }
 
+.container#portfolio {
+  max-width: 70%;
+}
 .container#portfolio > .header {
   border-image: linear-gradient(90deg,#dbd73f,#6000b7) 1;
 }
@@ -277,18 +288,6 @@ main.flex-center {
   white-space: nowrap;
 }
 /* END PAGE GRADIENTS */
-
-/* BEGIN SCROLL BAR */
-::-webkit-scrollbar {
-  width: 6px;
-}
-::-webkit-scrollbar-track {
-  background: none;
-}
-::-webkit-scrollbar-thumb {
-  background: #fff;
-}
-/* END SCROLL BAR */
 
 /* BEGIN SPACERS */
 .spacer-1 {
