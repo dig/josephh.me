@@ -11,12 +11,11 @@ body {
   font-size: 1em;
 }
 
-h1, h2, h3, h4 {
+p, h1, h2, h3, h4 {
   margin: 0;
 }
 
 p {
-  margin: 0;
   padding: 0;
 }
 
@@ -31,6 +30,9 @@ small {
 
 main {
   width: 100%;
+}
+
+main.flex-center {
   height: calc(100% - 45px);
 }
 
@@ -51,27 +53,39 @@ footer {
   font-size: 0.75em;
 }
 
-footer > .right {
+footer.fixed > .right {
   position: fixed;
   bottom: 8px;
   right: 12px;
 }
 
-footer > .left {
+footer.fixed > .left {
   position: fixed;
   bottom: 8px;
   left: 12px;
 }
 
+footer:not(.fixed) > .right {
+  float: right;
+  padding-bottom: 8px;
+  padding-right: 12px;
+}
+
+footer:not(.fixed) > .left {
+  float: left;
+  padding-bottom: 8px;
+  padding-left: 12px;
+}
+
 @media only screen and (max-width: 768px) {
-  footer > .right, footer > .left {
+  footer.fixed > .right, footer.fixed > .left {
     left: 50%;
     transform: translateX(-50%);
     right: unset;
     white-space: nowrap;
   }
 
-  footer > .right {
+  footer.fixed > .right {
     bottom: calc(0.75em + 12px);
   }
 }
@@ -199,6 +213,7 @@ main.flex-center {
 
 .container > .content {
   padding: 8px 0;
+  line-height: 1.4;
 }
 
 .portfolio-image {
