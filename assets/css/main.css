@@ -192,13 +192,14 @@ main.flex-center {
 .portfolio-image {
   position: relative;
   box-sizing: border-box;
-  cursor: pointer;
   font-family: Rubik, sans-serif;
   transition: 0.3s;
   -webkit-filter: grayscale(100%);
   filter: grayscale(100%);
   padding: 5px;
   color: #bbb;
+  max-height: 210px;
+  overflow: hidden;
 }
 
 .portfolio-image:hover {
@@ -214,7 +215,7 @@ main.flex-center {
 
 .portfolio-image > .title {
   position: absolute;
-  bottom: 12px;
+  bottom: 8px;
   left: 12px;
   text-transform: uppercase;
   font-weight: 600;
@@ -223,7 +224,7 @@ main.flex-center {
 .portfolio-image > .subtitle {
   display: none;
   position: absolute;
-  bottom: 12px;
+  bottom: 8px;
   left: 12px;
 }
 
@@ -233,7 +234,7 @@ main.flex-center {
 
 .portfolio-image:hover .title {
   display: block;
-  bottom: 26px;
+  bottom: 22px;
 }
 
 /* BEGIN PAGE GRADIENTS */
