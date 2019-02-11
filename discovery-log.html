@@ -19,11 +19,27 @@
 
     <header>
       <nav class="center">
-        <a href="index.html">Home</a>
-        <a href="about.html">About Me</a>
-        <a href="portfolio.html">Portfolio</a>
-        <a href="literature-review.html">Lit Review</a>
-        <a class="selected" href="discovery-log.html">Discovery Log</a>
+        <div class="desktop">
+          <a href="index.html">Home</a>
+          <a href="about.html">About Me</a>
+          <a href="portfolio.html">Portfolio</a>
+          <a href="literature-review.html">Lit Review</a>
+          <a class="selected" href="discovery-log.html">Discovery Log</a>
+        </div>
+
+        <div class="mobile">
+          <input type="checkbox" id="nav" class="nav-toggle">
+          <label for="nav"><i class="fas fa-bars fa-lg"></i></label>
+
+          <div class="options center">
+            <label for="nav"><i class="fas fa-times fa-lg"></i></label>
+            <a href="index.html">Home</a>
+            <a href="about.html">About Me</a>
+            <a href="portfolio.html">Portfolio</a>
+            <a href="literature-review.html">Lit Review</a>
+            <a href="discovery-log.html">Discovery Log</a>
+          </div>
+        </div>
       </nav>
     </header>
 

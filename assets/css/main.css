@@ -100,23 +100,61 @@ footer a {
   font-weight: 600;
 }
 
-nav > a {
+nav .desktop > a {
   transition: all .6s ease;
 }
 
-nav > a.selected, nav > a:hover {
+nav .desktop > a.selected, nav .desktop > a:hover {
   transform: scale(1.05);
 }
 
-nav > a.selected {
+nav .desktop > a.selected {
   font-weight: 600;
   border-bottom-width: 2px;
   border-bottom-style: solid;
   border-color: #fff;
 }
 
-nav > a:not(:last-child) {
+nav .desktop > a:not(:last-child) {
   margin-right: 16px;
+}
+
+nav .mobile, nav .mobile > input {
+  display: none;
+}
+
+nav .mobile label {
+  cursor: pointer;
+}
+
+nav .mobile > .options {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: #222;
+  display: none;
+  flex-direction: column;
+  z-index: 1000;
+}
+
+nav .mobile > .options > * {
+  flex: 1;
+}
+
+nav .mobile > input:checked ~ .options {
+  display: flex;
+}
+
+@media only screen and (max-width: 768px) {
+  nav .desktop {
+    display: none;
+  }
+
+  nav .mobile {
+    display: block;
+  }
 }
 
 video.cover {
