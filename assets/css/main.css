@@ -32,7 +32,7 @@ main {
   width: 100%;
 }
 
-main.flex-center {
+main.center {
   height: calc(100% - 45px);
 }
 
@@ -88,6 +88,12 @@ footer:not(.fixed) > .left {
   footer.fixed > .right {
     bottom: calc(0.75em + 12px);
   }
+
+  footer:not(.fixed) > .right, footer:not(.fixed) > .left {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
 }
 
 footer a {
@@ -131,13 +137,13 @@ video.cover {
   opacity: 0.25;
 }
 
-.flex-center {
+.center {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-main.flex-center {
+main.center {
   flex-direction: column;
 }
 
@@ -216,6 +222,25 @@ main.flex-center {
   line-height: 1.4;
 }
 
+.container > .header {
+  border-image: linear-gradient(90deg,#00bcff,#244493) 1;
+}
+
+.container > .content > span {
+  color: #00bcff;
+  white-space: nowrap;
+}
+
+.container#portfolio {
+  max-width: 70%;
+}
+
+@media only screen and (max-width: 768px) {
+  .container#portfolio {
+    max-width: 90%;
+  }
+}
+
 .portfolio-image {
   position: relative;
   box-sizing: border-box;
@@ -285,52 +310,6 @@ main.flex-center {
     bottom: calc(1em + 8px);
   }
 }
-
-/* BEGIN PAGE GRADIENTS */
-.container#about > .header {
-  border-image: linear-gradient(90deg,#00bcff,#244493) 1;
-}
-.container#about > .content > span {
-  color: #00bcff;
-  white-space: nowrap;
-}
-
-.container#lit-review > .header {
-  border-image: linear-gradient(90deg,#a1003d,#5b00b1) 1;
-}
-.container#lit-review > .content > span {
-  background: -webkit-linear-gradient(0deg,#a1003d,#5b00b1);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  white-space: nowrap;
-}
-.container#lit-review > article > h4:not(:first-child) {
-  margin-top: 10px;
-}
-.container#lit-review > article > p:not(:first-child) {
-  margin-bottom: 10px;
-}
-
-.container#portfolio {
-  max-width: 70%;
-}
-@media only screen and (max-width: 768px) {
-  .container#portfolio {
-    max-width: 90%;
-  }
-}
-.container#portfolio > .header {
-  border-image: linear-gradient(90deg,#dbd73f,#6000b7) 1;
-}
-.container#portfolio > .content > span {
-  background: -webkit-linear-gradient(0deg,#dbd73f,#6000b7);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  white-space: nowrap;
-}
-/* END PAGE GRADIENTS */
 
 /* BEGIN SPACERS */
 .spacer-1 {
