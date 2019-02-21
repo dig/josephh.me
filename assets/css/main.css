@@ -11,7 +11,7 @@ body {
   font-size: 1em;
 }
 
-p, h1, h2, h3, h4 {
+p, h1, h2, h3, h4, ul {
   margin: 0;
 }
 
@@ -275,6 +275,14 @@ main.center {
 
 .container > article > p {
   margin-bottom: 1em;
+}
+
+.container > article > ul {
+  margin-top: 0.5em;
+}
+
+.container.discovery-log > article > h3:not(:first-child) {
+  margin-top: 1em;
 }
 
 @media only screen and (max-width: 768px) {
