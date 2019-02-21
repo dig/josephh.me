@@ -273,8 +273,8 @@ main.center {
   max-width: 70%;
 }
 
-.container > article > h3:not(:first-child) {
-  margin-top: 1em;
+.container > article > p {
+  margin-bottom: 1em;
 }
 
 @media only screen and (max-width: 768px) {
