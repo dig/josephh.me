@@ -269,7 +269,7 @@ main.center {
   white-space: nowrap;
 }
 
-.container#portfolio {
+.container.portfolio {
   max-width: 70%;
 }
 
@@ -286,7 +286,7 @@ main.center {
 }
 
 @media only screen and (max-width: 768px) {
-  .container#portfolio {
+  .container.portfolio {
     max-width: 90%;
   }
 }
